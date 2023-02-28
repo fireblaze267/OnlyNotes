@@ -1,0 +1,55 @@
+.NewNote {
+  &-main-light {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    input {
+      transition: all 0.2s;
+      border-radius: 5px;
+      padding: 8px;
+      max-width: 100%;
+      border: 1px solid;
+      &:focus {
+        transition: all 0.2s;
+        padding: 12px;
+      }
+    }
+    button {
+      animation: sendButton 0.2s;
+      margin: 14px 0px;
+      padding: 12px;
+      min-width: 20%;
+      width: fit-content;
+      border-radius: 4px;
+    }
+  }
+  &-main-dark {
+    @extend .NewNote-main-light;
+  }
+}
+
+@keyframes sendButton {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes sendButtonMax {
+  0% {
+    transform: translateX(30px);
+  }
+  50% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

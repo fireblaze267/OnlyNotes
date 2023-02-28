@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Noto+Sans+JP&family=Poppins:wght@300;400;500&display=swap");
+
+$dark: #28262c;
+$light: #f0f0f0;
+$actionColor: #00b58e;
+$actionColorHover: #009c7a;
+$font-light: #f2f2f2;
+$font-dark: #2b2b2b;
+
+.main-light {
+  min-height: 100vh;
+  height: auto;
+  background-color: $light;
+  color: $font-dark;
+  input {
+    background-color: #ffffff;
+  }
+}
+
+.main-dark {
+  min-height: 100vh;
+  height: auto;
+  background-color: $dark;
+  color: $font-light;
+  input {
+    background-color: #f0f0f0;
+  }
+}
+.Jfont {
+  font-family: "Noto Sans JP", sans-serif;
+}
+svg {
+  cursor: pointer;
+}
+
+input {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  ::placeholder {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  transition: background-color 0.5s ease;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+p,
+label,
+span {
+  font-family: "Poppins", sans-serif;
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 8px;
+  font-family: "Montserrat", sans-serif;
+  background-color: $actionColor;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+  svg {
+    margin: 0px 8px;
+  }
+  &:hover {
+    transition: all 0.2s;
+    background-color: $actionColorHover;
+  }
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

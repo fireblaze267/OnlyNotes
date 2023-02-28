@@ -1,0 +1,73 @@
+.header {
+  &-main-light {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+  }
+  &-main-dark {
+    @extend .header-main-light;
+  }
+  &-slogan-light {
+    white-space: nowrap;
+    grid-column: 2;
+    justify-self: center;
+  }
+  &-slogan-dark {
+    @extend .header-slogan-light;
+  }
+
+  &-options-light {
+    grid-column: 3;
+    justify-self: flex-end;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding: 6px;
+    margin: 6px 0px;
+    border-radius: 5px;
+    &-itens {
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      cursor: pointer;
+      &:hover {
+        transition: 0.2s;
+        background-color: #28262c;
+        color: white;
+        border-radius: 4px;
+      }
+    }
+    svg {
+      animation: slideTheme 0.3s;
+      width: 1.075em;
+      height: auto;
+      margin: 0px 8px;
+    }
+  }
+  &-options-dark {
+    @extend .header-options-light;
+
+    &-itens {
+      @extend .header-options-light-itens;
+      &:hover {
+        background-color: #f0f0f0;
+        color: #28262c;
+      }
+    }
+  }
+}
+
+@keyframes slideTheme {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,27 @@
+.view-list {
+  &-flex-light {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    h1 {
+      color: #b2b2b2;
+    }
+  }
+  &-main-light {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    h1 {
+      color: #b2b2b2;
+    }
+  }
+  &-main-dark {
+    @extend .view-list-main-light;
+  }
+  &-main-flex-dark {
+    @extend .view-list-flex-light;
+  }
+}

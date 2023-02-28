@@ -1,0 +1,85 @@
+.deleteN {
+  animation: deleteAnimate 0.2s ease-in-out;
+  width: 100%;
+  background-color: #6db1bf;
+  padding: 12px;
+  margin: 4px;
+  border-radius: 4px;
+  border: solid 1px transparent;
+}
+
+.note {
+  &-main-light {
+    animation: ShowUp 0.2s ease-in-out;
+    width: 100%;
+    background-color: #009b9b;
+    padding: 12px;
+    margin: 4px;
+    border-radius: 4px;
+    border: solid 1px transparent;
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      border-color: #009b9b;
+    }
+    p {
+      width: fit-content;
+      color: white;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &-bottom {
+    margin-top: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      padding: 4px;
+      border-radius: 8px;
+      &:hover:nth-child(2) {
+        background-color: #bb0101;
+      }
+    }
+  }
+  &-main-dark {
+    @extend .note-main-light;
+    background-color: #009b9b;
+    &:hover {
+      transition: all 0.25s ease-in-out;
+      border-color: #c4c4c4;
+    }
+  }
+}
+
+.strike {
+  position: relative;
+}
+.strike::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: black;
+}
+
+@keyframes ShowUp {
+  0% {
+    scale: 0.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes deleteAnimate {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.2;
+  }
+}
