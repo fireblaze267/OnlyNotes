@@ -13,7 +13,7 @@ function NewNote({ theme, setData }) {
 
   function handleNewNote(e) {
     if (!note.title) {
-      window.alert("Não pode mandar vazio men");
+      window.alert("You cannot leave the form empty.");
       return;
     }
     let final = e;

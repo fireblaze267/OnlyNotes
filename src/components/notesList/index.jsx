@@ -22,11 +22,11 @@ function NoteList({ setData, data, theme }) {
         <div className="noteList-actions">
           <div className="noteList-func">
             <button onClick={() => verifyAll()}>
-              <Check2All /> Verificar Todos
+              <Check2All /> <label>Verificar Todos</label>
             </button>
 
             <button onClick={() => setData([])}>
-              <Trash2 /> Apagar Todos
+              <Trash2 /> <label> Apagar Todos </label>
             </button>
           </div>
 
