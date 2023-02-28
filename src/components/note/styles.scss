@@ -29,6 +29,13 @@
       text-overflow: ellipsis;
     }
   }
+  &-title {
+    p {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
   &-bottom {
     margin-top: 4px;
 
