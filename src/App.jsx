@@ -15,7 +15,6 @@ function App() {
   useEffect(() => {
     if (firstRender.current) {
       firstRender.current = false;
-      return;
     }
     if (previousData) {
       setData(previousData);
